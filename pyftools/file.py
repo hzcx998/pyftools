@@ -56,8 +56,8 @@ def __load_txt(path):
             data = fp.read()
             fp.close()
         except Exception:
-            print("xtools file: open file", path, "failed!")
-            print("xtools file: stop serverce!")
+            print("pyftools: open file", path, "failed!")
+            print("pyftools: stop serverce!")
             sys.exit()
     return data
 
@@ -77,7 +77,7 @@ def load_file(path, types = None):
     if ext == "txt":
         return [path, __load_txt(path)]
     else:
-        print("xtools file: format", ext, "not support!")
+        print("pyftools: format", ext, "not support!")
         return None
 
 def load_files(path, types = None):   
@@ -129,7 +129,7 @@ def wash_file(file_path, wash_arg):
     callback = wash_arg[0]
     arg = wash_arg[1]
     if callback == None:
-        print("Error: xtools filef: wash_file: callback is None!")
+        print("Error: pyftoolsf: wash_file: callback is None!")
         return
     file_data = load_file(file_path, [])
     buf = callback(file_data[0], file_data[1], arg)

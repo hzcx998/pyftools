@@ -1,5 +1,5 @@
-from xtools import file
-from xtools import text
+from pyftools import file
+from pyftools import text
 
 def walk_func(path, arg):
     print("path name:", path)
@@ -16,4 +16,4 @@ if __name__ == "__main__":
     print(s)
     l = text.convert_str2list(s, '\n')
     print(l)
-    print(file.get_filename("asdasd/asdas//asdasd/xtools"))
+    print(file.get_filename("asdasd/asdas//asdasd/pyftools"))
