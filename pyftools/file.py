@@ -131,7 +131,9 @@ def wash_file(file_path, wash_arg):
     if callback == None:
         print("Error: pyftoolsf: wash_file: callback is None!")
         return
-    file_data = load_file(file_path, [])
+    file_data = load_file(file_path)
+    if file_data == None:
+        return
     buf = callback(file_data[0], file_data[1], arg)
     if buf != None:
         save_file(file_path, buf)
